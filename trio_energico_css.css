@@ -1,0 +1,853 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   display modified to 'flex' */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, div{
+	display: flex;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+/*
+=====================================================
+Main Styles
+=====================================================
+*/
+
+  * {
+    box-sizing: border-box;
+  }
+
+
+  /*html, body {
+    height: 100vh;
+  }*/
+
+   section, div, section, article, aside, figure {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  body {
+    font-family: 'Istok Web', sans-serif;
+    background: url('Backgrounds/2_smaller.jpg') no-repeat center/cover fixed;
+    overflow-y: scroll;
+    color: white;
+  }
+
+
+
+  h1, h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    text-align: center;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+
+  h2 {  
+    font-size: 2rem;
+    padding: 2rem;
+    margin-bottom: .5rem;
+  }
+
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+
+
+  p {
+    text-align: justify;
+    margin: 1rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+
+  .events-table {
+    margin-top: 2rem;
+    font-size: .75rem;
+    margin: 0 1rem;
+  }
+
+
+  thead td {
+    padding-bottom: 1rem;
+  }
+
+
+  td {
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 2px solid white;
+  }
+
+
+  button, input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    padding: .15rem .25rem;
+  }
+
+
+  .hidden {
+    display: none;
+  }
+
+
+  .visible-flex {
+    display: flex;
+  }
+
+
+  .visible-block {
+    display: block;
+  }
+
+
+  #newsletter-send, #input-msg-send {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+
+
+  #newsletter-send:hover, #input-msg-send:hover {
+    cursor: pointer;
+  }
+
+
+  #newsletter-send:active, #input-msg-send:active{
+    margin-top: .35rem;
+  }
+
+
+
+/*
+=====================================================
+Menu Styles
+=====================================================
+*/
+
+  .menu-block {
+    position: fixed;
+    left: -90%;
+    height: 100vh;
+    width: 90%;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+
+
+  .menu-block > h1 {
+    position: absolute;
+    top: 0;
+    font-size: 2.5rem;
+    opacity: 0.5;
+    color: white;
+  }
+
+
+  .menu-block h1 {
+    color: white;
+    position: absolute;
+
+  }
+
+
+  .menu-block li:hover{
+    background-color: rgb(80,0,80);
+    cursor: pointer;
+  }
+
+
+  .main-menu {
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+
+  .main-menu, .lang-menu, .main-menu-list, .lang-menu-list {
+    width: 100%;
+  }
+
+
+  .main-m-items, .main-m-slider, .lang-menu-list li, .member-back-btn {
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 1);
+  }
+
+
+  .main-m-items {
+    width: 105%;
+    text-align: right;
+    font-size: 1.2rem;
+    margin: .75rem 0;
+    padding: .5rem 5% .5rem .5rem;
+    color: white;
+  }
+
+
+  .main-m-slider {
+    width: 2rem;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+  /*  position: absolute;
+    right: -2rem;
+    top: 17rem;*/
+    align-self: flex-end;
+    margin-top: 1rem;
+    margin-right: -2rem;
+    border-radius: 0 10px 10px 0;
+  }
+
+
+  .main-m-slider:hover {
+    cursor: pointer;
+  }
+
+
+  .lang-menu-list {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+
+
+  .lang-menu-list li{
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    padding: .35rem .25rem;
+  }
+
+
+
+/*
+=====================================================
+Section Styles
+=====================================================
+*/
+
+
+
+  .intro-article, .concert-article, .repertoire-article, .media-article, .contact-article, .member-article {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    width: 100%;
+    padding: .5rem;
+  }
+
+
+  .concert-article {
+  }
+
+
+
+  #intro-par:after {
+    content: "";
+    display: block;
+    height: .1075rem;
+    width: 40vw;
+    margin: 2rem auto;
+    background-color: white;
+  }
+
+
+  #trio-together-main img {
+    width: 80%;
+    margin: .5rem .5rem 1.5rem .5rem;
+  }
+
+
+  #trio-together-main:after {
+    content: "";
+    display: block;
+    height: .1075rem;
+    width: 40vw;
+    margin: 2rem auto;
+    background-color: white;
+  }
+
+
+
+  .members-container:after {
+    content: "";
+    display: block;
+    height: .1075rem;
+    width: 40vw;
+    margin: 3rem auto 2rem;
+    background-color: white;  
+  }
+
+
+  .member-photo {
+    width: 50%;
+    margin: 2rem .5rem .25rem .5rem;
+  }
+
+
+  .member-article{
+    padding: 1rem;
+  }
+
+
+  .member-article > div:first-of-type{
+    position: relative;
+  }
+
+
+  .member-back-btn {
+    width: 2.5rem;
+    height: 6rem;
+    position: fixed;
+    right: 0;
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    background-color: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.5);
+    color: white;
+  }
+
+
+  .member-back-btn:hover {
+    cursor: pointer;
+    border: 1px solid rgb(255,255,255);
+    background-color: rgba(255,255,255,0.4);
+  }
+
+
+  .member-photo-detail {
+    width: 10rem;
+    height: 15rem;
+  }
+
+
+  .members-container a {
+    margin-top: .25rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+
+  .members-container a:hover {
+    font-weight: 800;
+  }
+
+
+  .achiev-list {
+    margin: 1rem 1.25rem 1.5rem 1.25rem;
+  }
+
+  .achiev-items {
+    padding: .25rem;
+    margin: .5rem;
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+
+  .intro-article h3, .repertoire-article h3, .contact-article h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0 .5rem 0;
+    text-align: center;
+  }
+
+
+  .intro-article p:not(#intro-par), .repertoire-article p, .contact-article p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin: 0;
+  }
+
+
+  .media-article iframe {
+    width: 100%;
+  }
+
+
+  .media-videos:hover, .media-videos:focus, .media-photos:hover, .media-photos:focus {
+    font-weight: 800;
+  }
+
+
+  .media-photos-wrapper div {
+    overflow: hidden;
+    width: 10rem;
+    height: 10rem;
+    margin: .5rem;
+  }
+
+
+  .media-photos-wrapper div > img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .media-photos-wrapper img:hover {
+    cursor: pointer;
+  }
+
+
+  .media-videos-wrapper figure {
+    width: 12rem;
+    height: 8rem;
+    margin: 2rem 1rem;
+  }
+
+
+  .media-videos-wrapper figcaption {
+    text-align: center;
+    margin-top: .25rem;
+  }
+
+
+  .contact-article h3 {
+    margin-bottom: 1rem;
+  }
+
+
+  .contact-article .input-msg, .contact-article textarea, .contact-article .newsletter-input {
+    color: white;
+    background-color: rgba(255,207,255, 0.2);
+    border: 2px solid black;
+  }
+
+
+  .contact-article .input-msg:focus, .contact-article textarea:focus, .contact-article .newsletter-input:focus{
+    border: 1px solid white;
+  }
+
+
+  #tel-link:hover {
+    font-weight: 700;
+  }
+
+
+  .contact-form input {
+    margin: .25rem 0 1rem 0;
+  }
+
+
+  .newsletter-container {
+    margin-top: 2rem;
+  }
+
+
+  .newsletter-wrap * {
+    margin: .25rem .25rem 0 0;
+  }
+
+
+  .contact-social-list{
+    margin-top: 1rem;
+  }
+
+
+  .contact-social-list a {
+    padding: 1rem;
+  }
+
+
+/*
+=====================================================
+Media Querys
+=====================================================
+*/
+
+
+@media (orientation: portrait){
+
+  body{
+    background: url('Backgrounds/2_smaller_portrait.jpg') no-repeat center fixed;
+    background-size: cover;
+  }
+}
+
+
+
+@media (min-width: 400px){
+
+}
+
+
+
+@media (min-width: 800px){
+
+
+  .home-section {
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 25%;
+  }
+
+
+  .home-section > h1 {
+    display: none;
+  }
+
+
+  .menu-block {
+    left: 0;
+    width: 25%;
+    justify-content: flex-start;
+  }
+  
+
+  .menu-block > h1 {
+    top: inherit;
+    bottom: 0;
+    opacity: 1;
+    font-size: 3rem;
+  }
+
+
+  .main-menu {
+    margin: 2rem 1rem 1rem 0;
+  }
+
+
+  .main-m-items {
+    width: 110%;
+  }
+
+
+  .main-m-slider {
+    display: none;
+  }
+
+
+  .lang-menu {
+    margin-top: 1rem;
+  }
+
+
+  .lang-menu-list{
+    padding: 0;
+  }
+
+
+  .lang-menu-list li{
+    padding: .5rem .25rem;
+    margin: 0;
+  }
+
+
+  .intro-article, .concert-article, .repertoire-article, .media-article, .contact-article, .member-article {
+    width: 85%;
+    padding: 1.5rem;
+  }
+
+
+  .intro-article h3, .repertoire-article h3, .contact-article h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0 .25rem 0;
+  }
+
+
+  .intro-article p:not(#intro-par), .repertoire-article p, .contact-article p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin: 0;
+  }
+
+
+  .members-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+
+  #trio-together-main img {
+    width: 60%;
+  }
+
+
+  .member-photo {
+    width: 10rem;
+    height: 14rem;
+  }
+
+
+  .achiev-list {
+    margin: .25rem 2.5rem 1.5rem 2.5rem;
+  }
+
+
+  .member-article > div:first-of-type{
+    margin: 1rem 0 3rem 0;
+  }
+
+
+  .member-back-btn {
+    position: absolute;
+    height: 40%;
+    left: -20%;
+  }
+
+
+  .member-photo-detail {
+    width: 20rem;
+    height: 30rem;
+  }
+
+
+  .members-wrap:nth-child(2){
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+
+  .achiev-items {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
+
+  .events-table {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+
+  td {
+    padding: 2rem .25rem;
+  }
+
+
+  thead td {
+    font-size: 1.25rem;
+  }
+
+
+  .media-photos-wrapper, .media-videos-wrapper {
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+
+
+  .media-videos-wrapper figure {
+    width: 20rem;
+    height: 15rem;
+    margin: 2rem 1rem;
+  }
+
+
+  .contact-article {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+
+  .contact-info, .contact-form {
+    width: 40%;
+  }
+
+
+  form {
+    width: 100%;
+  }
+
+
+  .contact-msg, .input-msg, .newsletter-input {
+    width: 100%;
+  }
+
+
+  .newsletter-container {
+    align-items: flex-start;
+    margin-top: 4rem;
+  }
+
+
+  .newsletter-wrap {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+
+  .contact-form, .contact-msg {
+    align-items: flex-start;
+  }
+
+
+  .contact-form textarea {
+    width: 100%;
+    height: 17rem;
+    margin: .25rem 0;
+  }
+
+
+}
+
+
+
+
+@media (min-width: 1000px){
+
+
+  h1, .menu-block > h1 {
+    font-size: 4rem;
+  }
+
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: .5rem;
+  }
+
+
+  .lang-menu-list{
+    padding: 0 .5rem;
+  }
+
+
+  .lang-menu-list li{
+    padding: .5rem;
+  }
+
+
+  .intro-article, .repertoire-article, .concert-article, .media-article, .contact-article, .member-article {
+    width: 85%;
+    margin: 1.25rem;
+    padding: 2.5rem;
+  }
+
+
+  td {
+    padding: 2rem .75rem;
+  }
+
+
+
+  #trio-together-main {
+    margin-bottom: 4rem;
+  }
+
+
+  .members-wrap:nth-child(2){
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+
+  .members-container {
+    margin-bottom: 6rem;
+  }
+
+
+  .member-photo {
+    width: 12rem;
+    height: 16rem;
+  }
+
+
+  .member-article h1 {
+    margin-bottom: 2.5rem;
+  }
+
+
+  .member-article > div:last-of-type {
+    margin: 0 4rem;
+  }
+
+
+  .member-photo-detail {
+    width: 20rem;
+    height: 30rem;
+  }
+
+
+  .achiev-list {
+    margin: .25rem 4rem 1.5rem 4rem;
+  }
+
+
+  .media-article > h1, .media-photos, .media-videos {
+    margin-bottom: 4rem;
+  }
+
+
+  .media-photos-wrapper div {
+    width: 13rem;
+    height: 13rem;
+    margin: 1.5rem;
+  }
+
+
+  .media-photos-wrapper div > img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .media-videos-wrapper figure {
+    width: 30rem;
+    height: 25rem;
+  }
+
+
+  .contact-form textarea {
+    height: 22rem;
+  }
+
+}
+
+
+
+
